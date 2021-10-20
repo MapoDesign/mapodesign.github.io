@@ -2,12 +2,32 @@ body {color: rgb(58, 58, 58);font-family: roboto-condensed, sans-serif; margin: 
 
 #header{
     text-align: center;
-    height: 400px; 
+    height: 300px; 
     width: 100%;
-    background-color: rgb(187, 238, 187);
+    color: #fff;
+    background-color: #333;
     background-image: url(../img/MapoDesign-comunicazione-consulenza-digitale-slider.jpg);
     background-position: center -600px;
-    padding: 20px;
+    padding: 20px 20px 100px;
+    /* Per posizionare il testo in fondo*/
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+h1{
+    font-size: 3em;
+    font-weight: 500;
+    margin-block-start: -0.5em;
+}
+
+h2{
+    font-size: 2em;
+    font-weight: 500;
+}
+
+h3{
+    font-weight: 500;
 }
 
 #page{
@@ -15,6 +35,22 @@ body {color: rgb(58, 58, 58);font-family: roboto-condensed, sans-serif; margin: 
     padding: 20px;
 }
 
+#table-test{
+    margin: auto;
+    width: 900px;
+    padding: 20px;
+}
+
 footer{
+    background-color: #333;
     text-align: center;
+    padding: 20px;
+}
+
+footer a {
+    color: #fff;
+}
+
+footer a:hover {
+    color: bisque;
 }
