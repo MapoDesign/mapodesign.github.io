@@ -1,0 +1,20 @@
+body {color: rgb(58, 58, 58);font-family: roboto-condensed, sans-serif; margin: 0; padding: 0;}
+
+#header{
+    text-align: center;
+    height: 400px; 
+    width: 100%;
+    background-color: rgb(187, 238, 187);
+    background-image: url(../img/MapoDesign-comunicazione-consulenza-digitale-slider.jpg);
+    background-position: center -600px;
+    padding: 20px;
+}
+
+#page{
+    text-align: center;
+    padding: 20px;
+}
+
+footer{
+    text-align: center;
+}
