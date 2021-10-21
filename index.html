@@ -41,20 +41,58 @@
         <link rel="apple-touch-icon" href="https://mapodesign.com/img/MapoDesign-favicon.png" />
         <meta name="msapplication-TileImage" content="https://mapodesign.com/img/MapoDesign-favicon.png" />
 
+
         <!-- Fonts CSS -->
 	    <link rel="stylesheet" href="https://use.typekit.net/urc0tkn.css">
 	    <script src="https://kit.fontawesome.com/7d9ed15c2d.js" crossorigin="anonymous"></script>
-
+        
+        <!-- Bootstrap CSS -->
+	    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+      
         <!-- Theme CSS -->
 	    <link href="css/main.css" rel="stylesheet" type="text/css">
-        
+          
+        <script src="https://kit.fontawesome.com/7d9ed15c2d.js" crossorigin="anonymous"></script>
+
+
         <style>
 
         </style>
         <script></script>
     </head>
     <body>
-        <div id="header">
+        <!-- Scroll bar -->
+        <div class="scroll">
+                            
+            <div class="progress-container">
+            <div class="progress-bar" id="myBar"></div>
+            </div>
+        </div>
+        <!-- end Scroll bar -->
+
+        <header>
+
+            <div id="topmenu" class="bg-white">
+                <nav class="navbar navbar-expand-lg navbar-light container">
+                    <a class="navbar-brand" href="http://www.mapodesign.com/index.html"><img src="img/MapoDesign-logoBig.png" alt="MapoDesign Logo" height="27" width="150"></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                        <div class="navbar-nav">
+                            <a class="nav-item nav-link" href="https://www.mapodesign.com/curriculum.html">Curriculum</a>
+                            <a class="nav-item nav-link" href="https://www.mapodesign.com/portfolio.html">Portfolio</a>
+                            <a class="nav-item nav-link" href="http://blog.mapodesign.com/categoria/blog/">Blog</a>
+                            <!--<a class="nav-item nav-link" href="http://www.mapodesign.com/partnership/">Partnership</a>-->
+                            <a class="nav-item nav-link" href="http://blog.mapodesign.com/contatti/">Contatti</a>		
+                        </div>
+                    </div>
+                    <!-- <div id="language"><a href="#"><img src="img/IT.png" alt="IT"></a> | <a href="#"><img src="img/EN.png" alt="EN"></a></div> -->
+                </nav>
+            </div>
+        </header>
+
+        <div id="slider">
             <div class="text-content">
                 <h3>Benvenuto! Io sono</h3>
                 <h1>Elisa Resmini</h1>
@@ -62,48 +100,318 @@
         </div>
 
         <div id="page">
-            <p> Creo siti web per piccoli cliente e seguo la creazione di pagine web e newsletter per multinazionali</p>
-            <h2>Cosa posso fare per te?</h2>
-            <ul>
-                <li>Newsletter responsive e animate</li>
-                <li>Siti web low-cost</li>
-                <li>Front-end per grossi progetti in AGILE</li>
-            </ul>
+            <div class="container">
+				<h2>Hard Skills</h2>
+
+				<div id="card-skill" class="card-columns p-4 container">
+					<div class="card text-center">
+						<div class="card-body">
+						<i class="fas fa-shopping-cart"></i><h5 class="card-title">Gestione CMS</h5>
+						<p class="card-text">Posso progettare ed installare un sito WordPress. Ho gestito siti eCommerce in Prestashop e Magento.<br> Drupal COMING SOON!</p>
+						</div>
+					</div>
+					<div class="card text-center">
+						<blockquote class="mb-0 card-body">
+							<i class="fab fa-adobe"></i><h5 class="card-title">Adobe CC</h5>
+							<p class="card-text">Photoshop, Illustrator, Indesign, Premiere, XD. <br> In possesso di utenza personale di Adobe.</p>
+						</blockquote>
+					</div>
+					<div class="card text-center bg-primary text-white">
+						<blockquote class="mb-0 card-body">
+							<i class="fas fa-wifi"></i><h5 class="card-title">Smart Work</h5>
+							<p class="card-text">Ho esperienza di AGILE e Smart work in team Vodafone e Leroy Merlin.</p>
+						</blockquote>
+					</div>
+					<div class="card text-center">
+							<div class="card-body">
+							<i class="fas fa-envelope-open-text"></i><h5 class="card-title">Newsletter Developer</h5>
+							<p class="card-text">Posso gestire le newsletter a livello UX + UI e developer. Creo la struttura di newsletter responive, animate e con struttura personalizzata.</p>
+
+							</div>
+						</div>
+					<div class="card bg-primary text-white text-center">
+						<blockquote class="mb-0 card-body">
+							<i class="fab fa-js-square"></i><h5 class="card-title">Javascript &amp; JQuery</h5>
+						<footer class="blockquote-footer text-white">
+							<small>
+								<a href="http://developer.mapodesign.com/testa-la-tua-reazione/" style="color: white;" target="blank" rel="noopener noreferrer">Guarda un gioco che ho creato</a>
+							</small>
+						</footer>
+						</blockquote>
+					</div>
+					<div class="card text-center">
+						<div class="card-body">
+						<i class="fab fa-bootstrap"></i><h5 class="card-title">Bootstrap</h5>
+						<p class="card-text">Ho conoscenze di Bootstrap, questo sito ad esempio è creato così.</p>
+						</div>
+					</div>
+					<div class="card text-center">
+						<div class="card-body">
+						<i class="fas fa-palette"></i><h5 class="card-title">UX / UI Siti Web</h5>
+						<p class="card-text">Ti serve una grafica personalizzata del tuo sito? Posso farlo!</p>
+
+						</div>
+					</div>
+					<div class="card text-center">
+						<div class="card-body">
+						<i class="fab fa-html5"></i> <i class="fab fa-css3-alt"></i><h5 class="card-title">Custom Templetes</h5>
+						<p class="card-text">Template personalizzati HTML5 + CSS3, WordPress e landing pages.</p>
+						</div>
+					</div>
+				</div>
+				
+				<div class="card-deck">
+					<div class="row">
+						<div class="col-lg">
+							  <div class="card">
+
+								<div class="card-body">
+									<h2>Esperienze rilevanti</h2>
+									<ul>
+
+										<li>
+											<strong>UX / UI e Newsletter Developer </strong><br/> Leroy Merlin, consulente About Agency
+										</li>
+										<li>
+											<strong>Editor HTML/CSS, Newsletter developer, eCommerce Product Manager</strong><br/> Vodafone, consulente Alkemy
+										</li>
+										<li>
+											<strong>E-commerce and Brand Manager</strong><br/> Orobianco, 100% Made in Italy
+										</li>
+										<li>
+											<strong>Front-end developer</strong><br/> Ecohmedia (web agency)
+										</li>
+										<li>
+											<strong>Art Director</strong><br/> Praesidium (GDO services)
+										</li>
+
+									</ul>
+								</div>
+							  </div>
+						</div>
+						<div class="col-lg">
+							  <div class="card">
+
+								<div class="card-body">
+									<h2>Istruzione</h2>
+									<ul>
+
+										<li>
+											<strong>AGILE</strong><br/> Vodafone, Corso in azienda
+										</li>
+										<li>
+											<strong>SEO</strong><br/> Primi sui motori + SheTech + Cariplo Factory, Corso aggiornamento
+										</li>
+										<li>
+											<strong>Digital Social Marketing</strong><br/> Manpower Milano, Corso aggiornamento
+										</li>
+										<li>
+											<strong>Art Director</strong><br/>Triennale <br/> IED Milano, Alta formazione artistica parauniversitaria
+										</li>
+										<li>
+											<strong>Tecnico Grafica Pubblicitaria</strong><br/> Olga Fiorini, Diploma Maturità
+										</li>
+
+									</ul>
+								</div>
+							  </div>
+						</div>
+						<div class="col-lg">
+							  <div class="card">
+								<div class="card-body">
+								  	<h2>Soft skills</h2>
+								  	<p>Metodo AGILE</p>
+								 	<div class="progress progress-color"><div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+									<p>Proattività</p>
+									<div class="progress progress-color"><div class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+									<p>Lavoro in team</p>
+									<div class="progress progress-color"><div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+									<p>Resilienza</p>
+									<div class="progress progress-color"><div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+									<p>Leadership</p>
+									<div class="progress progress-color"><div class="progress-bar" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+								</div>
+							  </div>
+							</div>
+						</div>
+				</div>
+				
+			</div>
+
         </div>
 
-        <div id="table-test">
-            <table>
-                <thead>
-                    <th>
-                        Hard Skills
-                    </th>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>
-                            HTML5
-                        </td>
-                        <td>
-                            CSS3
-                        </td>
-                        <td>
-                            JavaScript
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Python3
-                        </td>
-                        <td>
-                            JAVA11
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+        <div id="form">
+            
+            <form class="container">
+                <h2>Vuoi contattarmi?</h2>
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="inputEmail4">Email</label>
+                    <input type="email" class="form-control" id="inputEmail4">
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="inputNome">Nome</label>
+                    <input type="text" class="form-control" id="inputNome">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="inputTipoLavoro">Tipologia di lavoro</label>
+                  <input type="text" class="form-control" id="inputTipoLavoro" placeholder="Front-end Developer, UI Designer, WordPress Manager...">
+                </div>
+                <div class="form-row">
+                  <div class="form-group col-md-8">
+                    <label for="inputCity">City</label>
+                    <input type="text" class="form-control" id="inputCity">
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label for="inputState">State</label>
+                    <select id="inputState" class="form-control">
+                      <option selected>Choose...</option>
+                      <option>...</option>
+                    </select>
+                  </div>
+                  
+                </div>
+                <div class="form-group">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="gridCheck">
+                    <label class="form-check-label" for="gridCheck">
+                      Acconsento al trattamento dei mie dati personali unicamente per questo contatto.
+                    </label>
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-primary">Contattami</button>
+              </form>
         </div>
 
-        <footer>
-            <p><a href="mailto:elisaresmini@gmail.com">Contattami per mail</a></p>
-        </footer>
+        <!-- Footer -->
+<footer class="text-center text-lg-start bg-light text-muted">
+    <!-- Section: Social media -->
+    <section
+      class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom"
+    >
+      <!-- Left -->
+      <div class="me-5 d-none d-lg-block">
+        <span>Get connected with us on social networks:</span>
+      </div>
+      <!-- Left -->
+  
+      <!-- Right -->
+      <div>
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-google"></i>
+        </a>
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+      <!-- Right -->
+    </section>
+    <!-- Section: Social media -->
+  
+    <!-- Section: Links  -->
+    <section class="">
+      <div class="container text-center text-md-start mt-5">
+        <!-- Grid row -->
+        <div class="row mt-3">
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+            <!-- Content -->
+            
+            <img src="img/MapoDesign-logoBig.png" alt="MapoDesign Logo" height="27" width="150">
+            <p>
+              Here you can use rows and columns to organize your footer content. Lorem ipsum
+              dolor sit amet, consectetur adipisicing elit.
+            </p>
+          </div>
+          <!-- Grid column -->
+  
+          <!-- Grid column -->
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">
+              Categorie
+            </h6>
+            <p>
+              <a href="#!" class="text-reset">JavaScript</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">WordPress</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">UX Design</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">UI Design</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+  
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">
+              Link più usati
+            </h6>
+            <p>
+              <a href="#!" class="text-reset">Portfolio</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Curriculum</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Blog</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Contatti</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+  
+          <!-- Grid column -->
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">
+              Contatti
+            </h6>
+            <p><i class="fas fa-home me-3"></i> Busto Arsizio e Milano</p>
+            <p>
+              <i class="fas fa-envelope me-3"></i>
+              info@mapodesign.com
+            </p>
+            <p><i class="fas fa-phone me-3"></i> + 39 347 43 83 178</p>
+          </div>
+          <!-- Grid column -->
+        </div>
+        <!-- Grid row -->
+      </div>
+    </section>
+    <!-- Section: Links  -->
+  
+    <!-- Copyright -->
+    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+      © 2021 Copyright:
+      <a class="text-reset fw-bold" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+  <!-- Footer -->
     </body>
 </html>
