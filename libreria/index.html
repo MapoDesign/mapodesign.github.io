@@ -104,29 +104,10 @@
         <h2>Ricerca Libro</h2>
         <p>Benvenuto, inserisci l'autore da cercare</p>
         <input type="text" placeholder="Nome autore" id="search" name="search" style="width: 200px;"/>
-        <input type="button" value="Ricerca" onclick="cerca()">
+        <input type="button" value="Ricerca" onclick="search()">
+        <div id="searchResult"></div>
         <hr>
-        <table>
-            <thead>
-                <tr>
-                    <th scope="col">
-                        Titolo
-                    </th>
-                    <th scope="col">
-                        Autore
-                    </th scope="col">
-                    <th scope="col">
-                        Data
-                    </th>
-                    <th scope="col">
-                        Numero di pagine
-                    </th>
-                </tr>
-            </thead>
-            <tbody id="libreria">
-                
-            </tbody>
-        </table>
+        <div id="libreria"></div>
         <hr>
         <h2>Inserimento libro</h2>
         <p>Inserisci le informazioni del nuovo libro</p>
@@ -142,7 +123,7 @@
         <p>Inserisci il libro da cancellare</p>
         <form >
             <label>Titolo libro:</label><input type="text" id="textNome" placeholder="Titolo libro" required>
-            <input type="button" value="Cancella" onclick="cancelLibro();return false">
+            <input type="button" value="Cancella" onclick="cancelBook();return false">
         </form>
     </div>
 

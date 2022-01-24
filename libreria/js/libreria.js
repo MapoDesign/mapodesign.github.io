@@ -23,34 +23,39 @@ INSERIMENTO: creare una form per inserire un nuovo libro.
 
  */
 
-var libreria = [
-    new libro("Promessi sposi", "Manzoni", true, "1287-01-01", [[1, 4], [2, 3]]),
-    new libro("Amore ti trova sempre", "Sole", false, "2021-01-01", [[1, 10], [2, 7]]),
-    new libro("Insensata modernità", "Pasolini", true, "2014-01-01", [[1, 7], [2, 8]]),
-    new libro("Pasolini2", "Pasolini", true, "2014-01-01", [[1, 7], [2, 8]]),
-    new libro("Il giro del mondo in 80 giorni ", "Verne", false, "1991-01-01", [[1, 4], [2, 5]])
+let library=[
+    new book('I Promessi Sposi','Manzoni',true,1827,[[1, 4], [2, 3]]),
+    new book('Harry Potter','Rowling',true,[[1, 4], [2, 3]]),
+    new book('La tua seconda vita comincia quando capisci di averne una sola', true,'Raphaell Giordano',2015,[[1, 4], [2, 3]]),
+    new book('La vita è come una medusa non puoi prenderla a badilate','Guy Browning',true,2004,[[1, 4], [2, 3]]),
+    new book('La Divina Commedia','Dante Alighieri',true,1472,[[1, 4], [2, 3]]),
+    new book("Promessi sposi", "Manzoni", true, 1287, [[1, 4], [2, 3]]),
+    new book("Amore ti trova sempre", "Sole", false, 2021, [[1, 10], [2, 7]]),
+    new book("Insensata modernità", "Pasolini", true, 2014, [[1, 7], [2, 8]]),
+    new book("Pasolini2", "Pasolini", true, 2014, [[1, 7], [2, 8]]),
+    new book("Il giro del mondo in 80 giorni ", "Verne", false, 1991-01-01, [[1, 4], [2, 5]])
 ]
 
-function libro(nome, autore, letto, anno, capitoli) {
-    this.nome = nome;
-    this.autore = autore;
-    this.letto = letto;
-    this.anno = anno;
-    this.capitoli = capitoli;
-    this.stampaCopertina = function () { console.log(this.nome + " " + this.autore + " " + this.dataDiPubblicazione); }
+function book(title,author,read,year,pages) {
+    this.title = title;
+    this.author = author;
+    this.read=read;
+    this.year = year;
+    this.pages = pages;
+    this.stampaCopertina = function () { console.log(this.title + " " + this.author + " " + this.dataDiPubblicazione); }
     this.stampaPagineCapitoli = function () {
-        console.log("Il libro " + this.nome);
-        for (let i = 0; i < this.capitoli.length; i++) {
-            console.log(" ha al capitolo " + this.capitoli[i][0] + " pagine " + this.capitoli[i][1]);
+        console.log("Il libro " + this.title);
+        for (let i = 0; i < this.pages.length; i++) {
+            console.log(" ha al capitolo " + this.pages[i][0] + " pagine " + this.pages[i][1]);
         }
     }
     this.stampaAnno = function () {
-        console.log("Anno di pubblicazione " + this.anno);
+        console.log("Anno di pubblicazione " + this.year);
     }
     this.stampaPagineTotali = function () {
         let countPagine = 0;
-        for (let i = 0; i < this.capitoli.length; i++) {
-            countPagine = countPagine + this.capitoli[i][1];
+        for (let i = 0; i < this.pages.length; i++) {
+            countPagine = countPagine + this.pages[i][1];
         }
         return countPagine;
     }
@@ -58,99 +63,95 @@ function libro(nome, autore, letto, anno, capitoli) {
 
 var libreriaJSON = JSON.stringify(libreria);
 
-console.log()
+console.log(library);
 
 
-function creaTabella() {
-    var rigaLibro = "";
-    for (const l of libreria) {
-
-        rigaLibro += '<tr><td scope="row">' + l.nome + '</td><td>' + l.autore + '</td><td>' + l.anno + '</td><td>' + l.stampaPagineTotali() + '</td></tr>';
+function createLibrary() {
+    let background = true;
+    let table = document.getElementById('libreria');
+    table.innerHTML = '';
+    table.setAttribute('class','table');
+    for (const book of library) {
+        let item = document.createElement('div');
+        if (!!background) {
+            item.setAttribute('class','book flex bgGrey');
+            background = false;
+        } else {
+            item.setAttribute('class','book flex');
+            background = true;
+        }
+        let authorDiv = document.createElement('div');
+        authorDiv.append(book.author);
+        let titleDiv = document.createElement('div');
+        titleDiv.setAttribute('class','width50')
+        titleDiv.append(book.title);
+        let yearDiv = document.createElement('div');
+        yearDiv.append(book.year);
+        item.appendChild(titleDiv);
+        item.appendChild(authorDiv);
+        item.appendChild(yearDiv);
+        console.log(item);
+        table.appendChild(item);
+        //row +='<div><div>'+book.title+'</div><div>'+book.author+'</div><div>'+book.year+'</div><div>'+book.pages+'</div></div>';
     }
-    document.getElementById("libreria").innerHTML = rigaLibro;
 }
-creaTabella();
+
+createLibrary();
 
 
-function cerca() {
-    var ricercaAutore = document.getElementById("search").value;
-    //var newArrLibro = [];
-    if (ricercaAutore != "") {
-        for (const l of libreria) {
-            //ricercaAutore=ricercaAutore.trim();
-            if (l.autore == ricercaAutore) {
-             //   newArrLibro.push(l);
+function search() {
+    let searchAuthor = document.getElementById("search").value;
+    if (searchAuthor != '') {
+        for (const book of library) {
+            let table = document.getElementById('searchResult');
+            if (book.author == searchAuthor) {
+                let item = document.createElement('div');
+                item.setAttribute('class','book flex bgGreen');
+                let authorDiv = document.createElement('div');
+                authorDiv.append(book.author);
+                let titleDiv = document.createElement('div');
+                titleDiv.setAttribute('class','width50')
+                titleDiv.append(book.title);
+                let yearDiv = document.createElement('div');
+                yearDiv.append(book.year);
+                item.appendChild(titleDiv);
+                item.appendChild(authorDiv);
+                item.appendChild(yearDiv);
+                console.log(item);
+                table.appendChild(item);
             }
         }
-        rigaLibro = "";
-        for (const l of libreria) {
-            if (l.autore == ricercaAutore) {
-                rigaLibro += "<tr bgcolor="+"#66ff00><td>" + l.nome + "</td><td>" + l.autore + "</td><td>" + l.anno + "</td><td>" + l.stampaPagineTotali() + "</td></tr>";
-            } else{
-                rigaLibro += "<tr><td>" + l.nome + "</td><td>" + l.autore + "</td><td>" + l.anno + "</td><td>" + l.stampaPagineTotali() + "</td></tr>";
-            }
-        }
-        document.getElementById("libreria").innerHTML = rigaLibro;
-    } //else {
-      //  var rigaLibro = "";
-      //  for (const l of libreria) {
-
-      //      rigaLibro += "<tr><td>" + l.nome + "</td><td>" + l.autore + "</td><td>" + l.anno + "</td><td>" + l.stampaPagineTotali() + "</td></tr>";
-      //  }
-      //  document.getElementById("libreria").innerHTML = rigaLibro;
-    //}
+    }
 }
 
 
 
 function inserisciLibro() {
-    var nome = document.getElementById("nome").value;
-    var autore = document.getElementById("autore").value;
-    var data = document.getElementById("dataDiPubblicazione").value;
-    var pagine = document.getElementById("pagine").value;
-    var nuovoLibro = new libro(nome, autore, false, data, [[1, 20], [2, 50]]);
-    libreria.push(nuovoLibro);
-    creaTabella();
-    console.log(nuovoLibro);
-    console.log(libreria)
+    var title = document.getElementById("nome").value;
+    var author = document.getElementById("autore").value;
+    let read = false;
+    var year = document.getElementById("dataDiPubblicazione").value;
+    var pages = document.getElementById("pagine").value;
+    var newBook = new book(title,author,read,year,pages);
+    library.push(newBook);
+    createLibrary();
 }
 
-function cancelLibro(){
-    //console.log("Cancella Libro")
+function cancelBook(){
     let nome = document.getElementById("textNome").value;
-    //let autore =    document.getElementById("textAutore").value;
-
-    //console.log(nome+" "+autore);
-
-    
-    var indice = 0;
-    
-    //console.log(indice);
-    //libreria.splice(indice,1);
-    for( const l of libreria){ 
-        if ( l.nome==nome) {
-            libreria.splice(indice,1); 
+    var index = 0;
+    for( const l of library){ 
+        if ( l.title==nome) {
+            library.splice(index,1); 
             
         } 
         
-        if(l.autore==autore){
-            libreria.splice(indice,1);
+        if(l.author==autore){
+            library.splice(index,1);
             
         }
-        indice++;
+        index++;
         
      }
-//     for(var i = 0; i < libreria.length; i++) {
-//        console.log(libreria[i].nome);
-//        if(libreria[i].nome == nome && libreria[i].autore == autore){
-//            libreria.splice(i, 1);
-//            break;
-//        }
-//    }
-    creaTabella();
-    var rigaLibro = "";
-    for (const l of libreria) {
-        rigaLibro += "<tr><td>" + l.nome + "</td><td>" + l.autore + "</td><td>" + l.anno + "</td><td>" + l.stampaPagineTotali() + "</td></tr>";
-    }
-    document.getElementById("libreria").innerHTML = rigaLibro;
+    createLibrary();
 }
